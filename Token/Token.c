@@ -47,3 +47,16 @@ int PrintToken(LTOKEN_STRUCT* Token, size_t TabSize) {
 
 	return 0;
 };
+
+int FreeToken(LTOKEN_STRUCT* Token) {
+	if (Token->Value != NULL) {
+		free(Token->Value);
+		Token->Value = NULL;
+	};
+
+	if (Token->Value == NULL) {
+		printf("[Athum Warning]: Tried to free token that is already freed");
+	};
+
+	return 0;
+}

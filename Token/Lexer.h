@@ -11,10 +11,12 @@ typedef struct {
 	size_t Line;
 	size_t StrCLine;
 	size_t SizeTokenList;
+	size_t CapacityTokenList;
 	LTOKEN_STRUCT* TokenList;
 } LLEXER_STRUCT;
 
 LLEXER_STRUCT* New_LLEXER_STRUCT(char* Source);
 int AppendToken(LLEXER_STRUCT* self, LTOKEN_STRUCT* TokenStruct);
+int FreeTokens(LLEXER_STRUCT* self);
 
 #endif

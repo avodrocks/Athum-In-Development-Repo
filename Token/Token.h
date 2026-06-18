@@ -16,5 +16,6 @@ typedef struct {
 
 LTOKEN_STRUCT* New_LTOKEN_STRUCT(LTOKEN_TYPE Type, char* Source, size_t Index, size_t WhatLine, size_t WhatStrC);
 int PrintToken(LTOKEN_STRUCT* Token, size_t TabSize);
+int FreeToken(LTOKEN_STRUCT* Token);
 
 #endif
